@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             = new AccelerateInterpolator();
 
     // Gesture Detector
-    GestureDetector detector;
+    private GestureDetector detector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
