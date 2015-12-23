@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         mainLayout.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                guideView.setVisibility(View.INVISIBLE);
                 return detector.onTouchEvent(event);
             }
 
@@ -67,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void heart() {
+        guideView.setVisibility(View.INVISIBLE);
         circleBackground.setVisibility(View.VISIBLE);
         heartImageView.setVisibility(View.VISIBLE);
 
