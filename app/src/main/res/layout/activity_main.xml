@@ -1,36 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     tools:context="com.ratik.instagramheartdemo.MainActivity">
 
     <LinearLayout
+        android:id="@+id/guide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:orientation="horizontal"
-
         tools:ignore="UselessParent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
             android:gravity="center"
             android:text="@string/help_text"
             android:textColor="@android:color/white"
-            android:textSize="14sp"
-            android:layout_marginEnd="3dp"
-            android:layout_marginRight="3dp" />
+            android:textSize="14sp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start|center"
             android:contentDescription="@string/content_desc_heart"
-            android:src="@drawable/ic_heart" />
+            android:src="@drawable/ic_heart_small" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,5 +43,21 @@
             android:textSize="14sp" />
 
     </LinearLayout>
+
+    <View
+        android:id="@+id/circleBg"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/circle_background"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/heart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:src="@drawable/ic_heart"
+        android:visibility="gone" />
 
 </RelativeLayout>
